@@ -1,0 +1,31 @@
+{% extends 'admin/adminbase.html.twig' %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="display-4 text-center mt-3">
+                    {{ title }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-12 mt-2">
+                <a href="" class="btn btn-success">Добавить лот аукциона</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <h2>Лоты аукциона</h2>
+                <ul>
+                    {% for lot_item in lot %}
+                        <li>{{ lot_item.title }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
