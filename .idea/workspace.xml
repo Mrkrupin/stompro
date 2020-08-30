@@ -12,19 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e95b6ad8-6742-48d0-9877-e0120f737ea3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminLotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminLotController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Lot.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Lot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/LotType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LotType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/LotRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/LotRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/adminbase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/adminbase.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/lot/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/lot/form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/lot/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/lot/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user/form.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +202,7 @@
       <workItem from="1598629113567" duration="12048000" />
       <workItem from="1598647435055" duration="3706000" />
       <workItem from="1598683072422" duration="21924000" />
-      <workItem from="1598813574939" duration="8774000" />
+      <workItem from="1598813574939" duration="9002000" />
     </task>
     <servers />
   </component>
