@@ -44,13 +44,12 @@ class LotType extends AbstractType
                 'currency' => 'RUB'
             ))
             ->add('win_date', DateTimeType::class, array(
-                'label' => 'Дата окончания аукциона',
-                'widget' => 'choice',
+                'label' => 'Дата окончания аукциона'
             ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Сохранить',
                 'attr' => [
-                    'class' => 'btn btn-success'
+                    'class' => 'btn btn-success float-left mr-2'
                 ]
             ))
             ->add('delete', SubmitType::class, array(

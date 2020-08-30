@@ -12,7 +12,21 @@
     <div class="container-fluid">
         <div class="row no-gutters">
             <div class="col-12 mt-2">
-                <a href="" class="btn btn-success">Добавить лот аукциона</a>
+                <a href="{{ path('admin_lot_create') }}" class="btn btn-success">Добавить лот аукциона</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutters justify-content-center">
+            <div class="col-8">
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -22,7 +36,16 @@
                 <h2>Лоты аукциона</h2>
                 <ul>
                     {% for lot_item in lot %}
-                        <li>{{ lot_item.title }}</li>
+                        <li>
+                            <img src="{{ asset('uploads/lot/') }}{{ lot_item.image }}"
+                                 style="width: 50px;"
+                                 alt="">
+                            {{ lot_item.title }}
+
+                            <a href="{{ path('admin_lot_update', {'id': lot_item.id}) }}" class="btn-link">
+                                Редактировать
+                            </a>
+                        </li>
                     {% endfor %}
                 </ul>
             </div>

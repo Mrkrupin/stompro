@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\LotRepository;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=LotRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\LotRepository")
  */
 class Lot
 {
