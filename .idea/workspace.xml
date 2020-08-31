@@ -11,7 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e95b6ad8-6742-48d0-9877-e0120f737ea3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminLotController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminLotController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/LotRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/LotRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +204,8 @@
       <workItem from="1598629113567" duration="12048000" />
       <workItem from="1598647435055" duration="3706000" />
       <workItem from="1598683072422" duration="21924000" />
-      <workItem from="1598813574939" duration="9002000" />
+      <workItem from="1598813574939" duration="11282000" />
+      <workItem from="1598854322147" duration="2145000" />
     </task>
     <servers />
   </component>
@@ -226,10 +229,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="770" y="399" key="#Composer/0.0.1920.1040@0.0.1920.1040" timestamp="1598446896319" />
-    <state x="586" y="198" key="#Inspections" timestamp="1598646412297">
+    <state x="586" y="198" key="#Inspections" timestamp="1598854714616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1598646412297" />
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1598854714616" />
     <state x="552" y="178" width="816" height="774" key="#Intentions" timestamp="1598821719140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,10 +245,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598645457654" />
-    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser" timestamp="1598815710912">
+    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser" timestamp="1598825066004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598815710912" />
+    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598825066004" />
     <state x="808" y="306" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598815143357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -254,6 +257,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598462957125" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598854728821">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598854728821" />
     <state x="736" y="432" key="ComposerInitDialogKey" timestamp="1598713524147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,10 +293,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="60" y="255" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598819740529" />
-    <state x="712" y="243" key="NewPhpClassDialog" timestamp="1598815685135">
+    <state x="712" y="243" key="NewPhpClassDialog" timestamp="1598824585993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="712" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598815685135" />
+    <state x="712" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598824585993" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1598647570199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

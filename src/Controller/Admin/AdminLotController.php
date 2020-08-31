@@ -6,7 +6,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Lot;
 use App\Form\LotType;
-use App\Service\FileManagerServiceInterface;
+use App\Repository\LotRepositoryInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,42 +14,37 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminLotController extends AdminBaseController
 {
+    private $lotRepository;
+
+    public function __construct(LotRepositoryInterface $lotRepository)
+    {
+        $this->lotRepository = $lotRepository;
+    }
+
     /**
      * @Route("/admin/lot", name="admin_lot")
      */
     public function index()
     {
-        $lot = $this->getDoctrine()->getRepository(Lot::class)
-            ->findAll();
-
         $forRender = parent::renderDefault();
         $forRender['title'] = 'Лоты Аукциона';
-        $forRender['lot'] = $lot;
+        $forRender['lot'] = $this->lotRepository->getAllLot();
         return $this->render('admin/lot/index.html.twig', $forRender);
     }
 
     /**
      * @Route("/admin/lot/create", name="admin_lot_create")
      * @param Request $request
-     * @param FileManagerServiceInterface $fileManagerService
      * @return RedirectResponse|Response
      */
-    public function createLot(Request $request, FileManagerServiceInterface $fileManagerService)
+    public function createLot(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
         $lot = new Lot();
         $form = $this->createForm(LotType::class, $lot);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $image = $form->get('image')->getData();
-            if ($image) {
-                $fileName = $fileManagerService->imageLotUpload($image);
-                $lot->setImage($fileName);
-            }
-            $lot->setCreateAtValue();
-            $lot->setIsActive();
-            $em->persist($lot);
-            $em->flush();
+            $file = $form->get('image')->getData();
+            $this->lotRepository->setCreateLot($lot, $file);
             $this->addFlash('success', 'Лот добавлен');
             return $this->redirectToRoute('admin_lot');
         }
@@ -63,38 +58,23 @@ class AdminLotController extends AdminBaseController
      * @Route("/admin/lot/update/{id}", name="admin_lot_update")
      * @param int $id
      * @param Request $request
-     * @param FileManagerServiceInterface $fileManagerService
      * @return RedirectResponse|Response
      */
-    public function update(int $id, Request $request, FileManagerServiceInterface $fileManagerService)
+    public function update(int $id, Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $lot = $this->getDoctrine()->getRepository(Lot::class)
-            ->find($id);
+        $lot = $this->lotRepository->getOneLot($id);
         $form = $this->createForm(LotType::class, $lot);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
             if ($form->get('save')->isClicked()){
-                $image = $form->get('image')->getData();
-                $imageOld = $lot->getImage();
-                if ($image){
-                    if ($imageOld){
-                        $fileManagerService->removeLotImage($imageOld);
-                    }
-                    $fileName = $fileManagerService->imageLotUpload($image);
-                    $lot->setImage($fileName);
-                }
+                $file = $form->get('image')->getData();
+                $this->lotRepository->setUpdateLot($lot, $file);
                 $this->addFlash('success', 'Пост обновлен');
             }
             if ($form->get('delete')->isClicked()){
-                $image = $lot->getImage();
-                if ($image){
-                    $fileManagerService->removeLotImage($image);
-                }
-                $em->remove($lot);
+                $this->lotRepository->setDeleteLot($lot);
                 $this->addFlash('success', 'Лот удален');
             }
-            $em->flush();
             return $this->redirectToRoute('admin_lot');
         }
         $forRender = parent::renderDefault();
