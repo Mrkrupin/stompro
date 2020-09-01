@@ -4,7 +4,6 @@
 namespace App\Service;
 
 
-use Symfony\Component\Filesystem\Exception\IOException;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -44,21 +43,11 @@ class FileManagerService implements FileManagerServiceInterface
     public function removeLotImage(string $fileName)
     {
         $fileSystem = new Filesystem();
-        $fileImage = $this->getLotImageDirectory() . '' . $fileName;
+        $fileImage = $this->getLotImageDirectory() . '/' . $fileName;
         try {
             $fileSystem->remove($fileImage);
         } catch (IOExceptionInterface $exception) {
             echo $exception->getMessage();
         }
     }
-    /*    public function removeLotImage(string $fileName)
-        {
-            $fileSystem = new Filesystem();
-            $fileImage = $this->getLotImageDirectory().''.$fileName;
-            try {
-                $fileSystem->remove($fileImage);
-            } catch (IOExceptionInterface $exception){
-                echo $exception->getMessage();
-            }
-        }*/
 }

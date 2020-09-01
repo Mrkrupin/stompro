@@ -7,7 +7,6 @@ use App\Service\FileManagerServiceInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
-use phpDocumentor\Reflection\Types\Parent_;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**

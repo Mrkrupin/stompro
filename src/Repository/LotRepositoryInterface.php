@@ -36,7 +36,6 @@ interface LotRepositoryInterface
 
     /**
      * @param Lot $lot
-     * @param string $fileName
      */
     public function setDeleteLot(Lot $lot);
 }
