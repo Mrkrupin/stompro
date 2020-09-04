@@ -13,6 +13,5 @@ class BaseController extends AbstractController
         return [
             'title' => 'Аукцион',
         ];
-
     }
 }

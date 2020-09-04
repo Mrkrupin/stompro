@@ -53,9 +53,22 @@ class AdminUserController extends AdminBaseController
         }
 
         $forRender = parent::renderDefault();
-        $forRender['title'] = 'Форма создания пользователя';
+        $forRender['title'] = 'Форма регистрации админа';
         $forRender['form'] = $form->createView();
         return $this->render('admin/user/form.html.twig', $forRender);
+    }
 
+    /**
+     * @Route("admin/user/delete/{id}", name="admin_user_delete")
+     * @param int $id
+     * @return RedirectResponse
+     */
+    public function delete(int $id) {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getDoctrine()->getRepository(User::class)->find($id);
+        $em->remove($user);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_user');
     }
 }
