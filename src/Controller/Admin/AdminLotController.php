@@ -69,7 +69,7 @@ class AdminLotController extends AdminBaseController
             if ($form->get('save')->isClicked()){
                 $file = $form->get('image')->getData();
                 $this->lotRepository->setUpdateLot($lot, $file);
-                $this->addFlash('success', 'Пост обновлен');
+                $this->addFlash('success', 'Лот обновлен');
             }
             if ($form->get('delete')->isClicked()){
                 $this->lotRepository->setDeleteLot($lot);

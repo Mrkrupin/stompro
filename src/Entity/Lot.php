@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Lot
 {
     private const ACTIVE = 1;
+    private const TYPE_BUY = "buy";
 
     /**
      * @ORM\Id
@@ -76,7 +77,7 @@ class Lot
         return $this;
     }
 
-    public function getContent(): ?string
+    public function getContent(): string
     {
         return $this->content;
     }
@@ -88,12 +89,12 @@ class Lot
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImage(): string
     {
         return $this->image;
     }
 
-    public function setImage(?string $image): self
+    public function setImage(string $image): self
     {
         $this->image = $image;
 
@@ -160,6 +161,6 @@ class Lot
 
     public function setIsActive()
     {
-        $this->is_active = self::ACTIVE;
+        $this->is_active = self::TYPE_BUY;
     }
 }

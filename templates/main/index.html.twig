@@ -1,5 +1,7 @@
 {% extends 'main/base.html.twig' %}
-{% block title %}{{ title }}{% endblock %}
+{% block title %}
+    {{ title }}
+{% endblock %}
 {% block body %}
     <div class="container-fluid">
         <div class="row no-gutters justify-content-center mt-5">
@@ -7,6 +9,27 @@
                 <h1 class="display-4 text-center">
                     {{ title }}
                 </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="card-deck">
+                    {% for lot_item in lot %}
+                        <div class="row">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{ asset('uploads/lot/') }}{{ lot_item.image }}"
+                                     class="card-img-top"
+                                     alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
             </div>
         </div>
     </div>

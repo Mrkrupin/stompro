@@ -30,7 +30,6 @@ class FileManagerService implements FileManagerServiceInterface
     public function imageLotUpload(UploadedFile $file): string
     {
         $fileName = uniqid() . '.' . $file->guessExtension();
-
         try {
             $file->move($this->getLotImageDirectory(), $fileName);
         } catch (FileException $exception) {

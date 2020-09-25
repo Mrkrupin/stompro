@@ -20,8 +20,8 @@ class LotType extends AbstractType
         $builder
             ->add('image', FileType::class, array(
                 'label' => 'Изображение',
-                'required' => false,
                 'mapped' => false,
+                'required' => false,
             ))
             ->add('title', TextType::class, array(
                 'label' => 'Название',

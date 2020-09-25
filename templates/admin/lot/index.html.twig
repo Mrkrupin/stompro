@@ -40,11 +40,9 @@
                             <img src="{{ asset('uploads/lot/') }}{{ lot_item.image }}"
                                  style="width: 50px;"
                                  alt="">
-                            {{ lot_item.title }}
+                            {{ lot_item.title }}, {{ lot_item.content }}, {{ lot_item.rate }}, {{ lot_item.price }}, {{ lot_item.winDate|date('h:i d.m.y') }}, {{ lot_item.isActive }}
 
-                            <a href="{{ path('admin_lot_update', {'id': lot_item.id}) }}" class="btn-link">
-                                Редактировать
-                            </a>
+                            <a href="{{ path('admin_lot_update', {'id': lot_item.id}) }}" class="btn-link">Редактировать</a>
                         </li>
                     {% endfor %}
                 </ul>
